@@ -7,8 +7,9 @@ div.content{
   background-color: #f5f5f5;
   width: 1250px; margin: 0 auto;
 }
+/* content>header */
 div.content>header{
-overflow: hidden;
+  overflow: hidden;
 }
 div.content>header>.topMenu{
   float: left;
@@ -22,7 +23,7 @@ div.content>header>.topMenu>.list{}
 div.content>header>.topMenu>.list>li{
   font-weight: bold; cursor: pointer;
 }
-div.content>header>.topMenu>.list>li.clicked{
+div.content>header>.topMenu>.list>li.now{
   text-decoration: underline; color: #000;
 }
 div.content>header>.topMenu>.list>li:hover{
@@ -55,15 +56,6 @@ div.content>header>nav>.menu>div{
   background-size: cover;
   background-position: center;
 }
-div.content>header>nav>.menu>div{}
-div.content>header>nav>.menu>.icon1{background-image: url('../img/mIcon01.png');}
-div.content>header>nav>.menu>.icon2{background-image: url('../img/mIcon04.png');}
-div.content>header>nav>.menu>.icon3{background-image: url('../img/mIcon03.png');}
-div.content>header>nav>.menu>.icon4{background-image: url('../img/mIcon04.png');}
-div.content>header>nav>.clicked>.icon1.selected{background-image: url('../img/sIcon02.png');}
-div.content>header>nav>.clicked>.icon2.selected{background-image: url('../img/mIcon02.png');}
-div.content>header>nav>.clicked>.icon3.selected{background-image: url('../img/sIcon03.png');}
-div.content>header>nav>.clicked>.icon4.selected{background-image: url('../img/sIcon04.png');}
 div.content>header>nav>.menu>h3{
   float: left; height: 20px;
   margin-top: 10px;
@@ -72,6 +64,82 @@ div.content>header>nav>.menu>h3{
   color: #aaa;
   border-right: 2px solid #ddd;
 }
+/* 아이콘 클릭시 색상 바뀜 */
+div.content>header>nav>.menu>.icon1{background-image: url('../img/mIcon01.png');}
+div.content>header>nav>.menu>.icon2{background-image: url('../img/mIcon04.png');}
+div.content>header>nav>.menu>.icon3{background-image: url('../img/mIcon03.png');}
+div.content>header>nav>.menu>.icon4{background-image: url('../img/mIcon04.png');}
+div.content>header>nav>.clicked>.icon1.selected{background-image: url('../img/sIcon01.png');}
+div.content>header>nav>.clicked>.icon2.selected{background-image: url('../img/mIcon02.png');}
+div.content>header>nav>.clicked>.icon3.selected{background-image: url('../img/sIcon03.png');}
+div.content>header>nav>.clicked>.icon4.selected{background-image: url('../img/sIcon04.png');}
 div.content>header>nav>.clicked>h3{
-  color: #f26722;
+  color: #eb6202;
+}
+/* content>section */
+div.content>section{
+  overflow: hidden;
+}
+/* content>section>nav common_style */
+div.content>section>.nav{
+  width: 190px;
+  float: left;
+}
+div.content>section>.nav>.navGroup li>.gnb{
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+div.content>section>.nav>.navGroup li>.lnb{
+  margin-left: 30px;
+  padding: 10px 0;
+}
+div.content>section>.nav>.navGroup li>.lnb>li{
+  cursor: pointer;
+}
+/* content>section>nav .open_style */
+div.content>section>.nav>.navGroup>.open{
+  padding: 15px 20px;
+  font-weight: bold;
+  line-height: 30px;
+  background-color: #eb6202; color: #fff;
+  position: relative;
+}
+div.content>section>.nav>.navGroup>.open>.iconPicture{
+  width: 26px; height: 32px;
+  position: absolute;
+  right: -13px; top: 60px;
+  z-index: 10;
+  background-image: url('../img/iconPicture.png');
+  background-size: cover;
+  background-position: center;
+}
+div.content>section>.nav>.navGroup>.open>p{
+  padding: 10px 0;
+  margin-left: 30px;
+  font-family: 'Adobe Myungjo std','HCR Batang', serif;
+  font-size: 13px;
+  line-height: 20px;
+}
+/* content>section>nav .close_style */
+div.content>section>.nav>.navGroup>.shadowWrap{
+  box-shadow: 2px 0 2px rgba(0,0,0,0.3);
+  padding: 0 20px;
+}
+div.content>section>.nav>.navGroup>.shadowWrap>.close{
+  padding: 15px 0;
+  font-weight: bold;
+  line-height: 30px;
+  border-bottom: 1px solid #ddd;
+}
+div.content>section>.nav>.navGroup>.shadowWrap>.close>.gnb>.ttl{
+  color: #000;
+}
+div.content>section>.nav>.navGroup>.shadowWrap>.close>.gnb>.ttl>span{
+  color: #999;
+}
+/* content>section>tapMenu*/
+div.content>section>.tapMenu{
+  float: left;
+  margin-left: 50px;
 }
