@@ -9,11 +9,9 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <!-- <script src="js/prefixfree.min.js" charset="utf-8"></script> -->
+  <script src="js/prefixfree.min.js" charset="utf-8"></script>
   <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
-  <script src="js/script.js">
-    charset = "utf-8" >
-  </script>
+  <script src="js/script.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -172,11 +170,12 @@
                     <div class="hdr">
                       사용중 수강권 <span>3</span>개
                     </div>
-                    <select name="eClass">
-                      <option value="">
+                    <div class="eClass">
+                      <div class="cl">
                         영단기 환급반 29기 (2014.06.01 ~ 2014.09.03) <span>"마감일까지 26일"</span>
-                      </option>
-                    </select>
+                      </div>
+                      <div class="btn"><i class="fas fa-caret-down"></i></div>
+                    </div>
                   </div>
                   <div class="menu">
                     <div class="btnWrap">
@@ -186,23 +185,23 @@
                       <button class="bk"><i class="far fa-redo-alt"></i>&nbsp;&nbsp;재수강하기</button>
                     </div>
                     <div class="linkWrap">
-                      <div class="link01">
-                        목표달성 가이드&nbsp;
-                        <i class="fas fa-chevron-circle-right"></i>
-                      </div>
                       <div class="link02">
                         FAQ 바로가기&nbsp;
+                        <i class="fas fa-chevron-circle-right"></i>
+                      </div>
+                      <div class="link01">
+                        목표달성 가이드&nbsp;
                         <i class="fas fa-chevron-circle-right"></i>
                       </div>
                     </div>
                   </div>
                   <div class="mission">
                     <div class="open">
-                      <div clss="missionSummary ">
+                      <div class="summary">
                         <div class="fl">
                           <div>출석현황 <span>42일</span></div>
-                          <div>미션상태<span>진행</span></div>
-                          <div>
+                          <div>미션상태 <span>진행</span></div>
+                          <div class="group">
                             <p>개인 달성률</p>
                             <div class="graph">
                               <div class="achieve"></div>
@@ -218,7 +217,7 @@
                           </h4>
                         </div>
                       </div>
-                      <div class="missionList">
+                      <div class="mssList">
                         <div class="fl">
                           <div class="msList">
                             <div class="graph">
@@ -284,6 +283,16 @@
                           미션현황 접기
                       </div>
                       <div class="btn"><i class="fas fa-caret-up"></i></div>
+                    </div>
+                  </div>
+                  <div class="ing">
+                    <div class="header">
+                      <h2>수강중인 강좌</h2>
+                      <span>(10)</span>
+                    </div>
+                    <div class="btnWrap">
+                      <button>일반강좌 추가&nbsp;&nbsp;<i class="fal fa-plus"></i></button>
+                      <button>미션고득점부스터 추가&nbsp;&nbsp;<i class="fal fa-plus"></i></button>
                     </div>
                   </div>
                 </div>

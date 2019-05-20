@@ -203,8 +203,162 @@ div.content>section>.tabGroup>.tabMenu>.subGroup>.tabMenu>.tabGroup2>li.clicked3
   background-color: #fff;
 }
 /* content>section>subGroup 소분류 tab title(환급반)내용 */
-div.content>section>.tabGroup>.tabMenu>.subGroup>.tabMenu>.subGroup2{}
+div.content>section>.tabGroup>.tabMenu>.subGroup>.tabMenu>.subGroup2{
+  background-color: #fff; padding: 20px;
+}
 div.content>section>.tabGroup>.tabMenu>.subGroup>.tabMenu>.subGroup2>div.sub01{}
-div.content>section>.tabGroup>.tabMenu>.subGroup>.tabMenu>.subGroup2>div.sub01>.stdProgram{}
-div.content>section>.tabGroup>.tabMenu>.subGroup>.tabMenu>.subGroup2>div.sub01>.menu{}
+
+/* sub01의 수강권종류 */
+div.content>section>.tabGroup>.tabMenu>.subGroup>.tabMenu>.subGroup2>div.sub01>.stdProgram{
+  overflow: hidden;
+}
+div.content>section .subGroup2>div.sub01>.stdProgram>.hdr{
+  width: 130px; height: 40px;
+  float: left;
+  line-height: 38px; text-align: center;
+  font-weight: bold; color: #000;
+  border-radius: 5px 0 0 5px; border: 2px solid #eee;
+  background-color: #eee;
+}
+div.content>section .subGroup2>div.sub01>.stdProgram>.eClass{
+  width: 780px; height: 40px;
+  float: left;
+  overflow: hidden;
+  line-height: 38px;
+  border-radius: 0 5px 5px 0; border: 2px solid #eee;
+  background: linear-gradient(#fff, #eee);
+}
+div.content>section .subGroup2>div.sub01>.stdProgram>.eClass>.cl{
+  width: calc(100% - 20px); float: left;
+  text-indent: 10px; color: #000;
+}
+div.content>section .subGroup2>div.sub01>.stdProgram>.eClass>.cl>span{
+  font-weight: bold;
+}
+div.content>section .subGroup2>div.sub01>.stdProgram>.eClass>.btn{
+  width: 20px; float: left;
+  cursor: pointer;
+}
+/* sub01의 버튼들과 바로가기링크 */
+div.content>section>.tabGroup>.tabMenu>.subGroup>.tabMenu>.subGroup2>div.sub01>.menu{
+  padding: 20px 0;
+}
+div.content>section .subGroup2>div.sub01>.menu{
+  display: flex;
+  justify-content: space-around;
+
+}
+div.content>section .subGroup2>div.sub01>.menu>.btnWrap{
+  width: 460px;
+  display: flex;
+  justify-content: space-around;
+}
+div.content>section .subGroup2>div.sub01>.menu>.btnWrap>button{
+  height: 30px;
+  margin-right: 5px;
+  line-height: 30px; font-weight: bold;
+  font-size: 12px;
+  border-radius: 3px; border: 1px solid ;
+  cursor: pointer;
+}
+div.content>section .subGroup2>div.sub01>.menu>.btnWrap>.wh{
+  background: linear-gradient(#fff, #eee);
+  border: 1px solid #eee;
+}
+div.content>section .subGroup2>div.sub01>.menu>.btnWrap>.wh>i{
+  margin-right: 30px;
+}
+div.content>section .subGroup2>div.sub01>.menu>.btnWrap>.bk{
+  background: linear-gradient(#999, #000);
+  border: 1px solid #000;
+  color: #fff;
+}
+div.content>section .subGroup2>div.sub01>.menu>.linkWrap{
+  width: calc(100% - 460px);
+  overflow: hidden;
+}
+div.content>section .subGroup2>div.sub01>.menu>.linkWrap>div{
+  float: right;
+  line-height: 30px; font-weight: bold;
+  cursor: pointer;
+}
+div.content>section .subGroup2>div.sub01>.menu>.linkWrap>.link02{
+  margin-left: 10px;
+}
+/* sub01의 미션현황 */
 div.content>section>.tabGroup>.tabMenu>.subGroup>.tabMenu>.subGroup2>div.sub01>.mission{}
+div.content>section .subGroup2>div.sub01>.mission>.open{}
+div.content>section .subGroup2>div.sub01>.mission>.open>.summary{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 2px solid #eee;
+}
+div.content>section .subGroup2>div.sub01>.mission>.open>.summary>div{
+  display: flex;
+  justify-content: space-between;
+  width: calc(50% - 5px);
+}
+div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fl{}
+div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fl>div{
+  height: 20px;
+  font-weight: bold;
+  text-align: center;
+  border-right: 1px solid #eee;
+  padding-right: 15px;  
+}
+div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fl>.group{
+  height: 20px;
+  display: flex;
+  justify-content: center;
+
+}
+div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fl>.group>p{
+
+}
+div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fl>.group>.graph{
+  margin: 6.5px 10px;
+  width: 100px; height: 7px;
+  border-radius: 2px;
+  background-color: #ddd;
+  position: relative;
+}
+div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fl>.group>.graph>.achieve{
+  width: 64%; height: 7px;
+  border-radius: 2px;
+  background-color: #444;
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+}
+div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fl>div>span{
+  font-weight: bold; color: #000;
+}
+div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fr{
+
+}
+div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fr>u{}
+div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fr>.btn{
+
+}
+div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fr>h4{
+  font-weight: bold;
+}
+  /* sub01의 미션목록 */
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList{}
+  /* sub01의 미션 공지사항 */
+div.content>section .subGroup2>div.sub01>.mission>.open>ul{}
+div.content>section .subGroup2>div.sub01>.mission>.open>ul>li{
+  list-style: initial;
+}
+div.content>section .subGroup2>div.sub01>.mission>.close{}
+div.content>section .subGroup2>div.sub01>.mission>.close>.ttl{}
+div.content>section .subGroup2>div.sub01>.mission>.close>.btn{}
+
+/* sub01의 수강중인 강좌 */
+div.content>section .subGroup2>div.sub01>.ing{}
+div.content>section .subGroup2>div.sub01>.ing>.header{}
+div.content>section .subGroup2>div.sub01>.ing>.header>h2{}
+div.content>section .subGroup2>div.sub01>.ing>.header>span{}
+div.content>section .subGroup2>div.sub01>.ing>.btnWrap{}
+div.content>section .subGroup2>div.sub01>.ing>.btnWrap>button{}
