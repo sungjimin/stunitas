@@ -54,4 +54,17 @@ $tab2.click(function(){ //소분류 탭 효과
 });
 // section>.tapMenu 효과//
 
+//미션현황 접기
+var $close = $('div.mission .close'),
+    $open = $('div.mission .open');
+
+$close.click(function(){
+  var dp = $(this).prev().css('display');
+  if(dp == 'block'){
+    $open.slideUp();
+  }else if(dp == 'none'){
+    $open.slideDown();
+  }
+});
+//미션현황 접기//
 });

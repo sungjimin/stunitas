@@ -3,6 +3,9 @@ a{
   display: block;
   width: 100%; height: 100%;
 }
+.hideTab{
+  display: none;
+}
 div.content{
   background-color: #f5f5f5;
   width: 1250px; margin: 0 auto;
@@ -85,7 +88,7 @@ div.content>section>.nav{
   width: 190px;
   float: left;
 }
-div.content>section>.nav>.navGroup li>.gnb{
+div.content>section>.nav>.navGroup li .gnb{
   display: flex;
   justify-content: space-between;
   cursor: pointer;
@@ -130,13 +133,19 @@ div.content>section>.nav>.navGroup>.shadowWrap>.close{
   padding: 15px 0;
   font-weight: bold;
   line-height: 30px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2px solid #eee;
+}
+div.content>section>.nav>.navGroup>.shadowWrap>.close:last-child{
+  border-bottom: none;
 }
 div.content>section>.nav>.navGroup>.shadowWrap>.close>.gnb>.ttl{
   color: #000;
 }
 div.content>section>.nav>.navGroup>.shadowWrap>.close>.gnb>.ttl>span{
   color: #999;
+}
+div.content>section>.nav>.navGroup>.shadowWrap>.close>.lnb{
+  margin-left: 30px;
 }
 /* content>section>tabMenu*/
 div.content>section>.tabGroup{
@@ -163,7 +172,7 @@ div.content>section>.tabGroup>.notice>.segment{
 /* content>section>tapMenu>대분류 tab title부분*/
 div.content>section>.tabGroup>.tabMenu{
   width: 950px;
-  padding: 20px 0 40px;
+  padding-top: 20px;
 }
 div.content>section>.tabGroup>.tabMenu>.tabGroup{
   display: flex;
@@ -204,7 +213,7 @@ div.content>section>.tabGroup>.tabMenu>.subGroup>.tabMenu>.tabGroup2>li.clicked3
 }
 /* content>section>subGroup 소분류 tab title(환급반)내용 */
 div.content>section>.tabGroup>.tabMenu>.subGroup>.tabMenu>.subGroup2{
-  background-color: #fff; padding: 20px;
+  background-color: #fff; padding: 20px 20px 0;
 }
 div.content>section>.tabGroup>.tabMenu>.subGroup>.tabMenu>.subGroup2>div.sub01{}
 
@@ -256,9 +265,9 @@ div.content>section .subGroup2>div.sub01>.menu>.btnWrap{
 div.content>section .subGroup2>div.sub01>.menu>.btnWrap>button{
   height: 30px;
   margin-right: 5px;
-  line-height: 30px; font-weight: bold;
+  line-height: 25px; font-weight: bold;
   font-size: 12px;
-  border-radius: 3px; border: 1px solid ;
+  border-radius: 3px;
   cursor: pointer;
 }
 div.content>section .subGroup2>div.sub01>.menu>.btnWrap>.wh{
@@ -266,7 +275,7 @@ div.content>section .subGroup2>div.sub01>.menu>.btnWrap>.wh{
   border: 1px solid #eee;
 }
 div.content>section .subGroup2>div.sub01>.menu>.btnWrap>.wh>i{
-  margin-right: 30px;
+  margin-right: 30px; font-size: 10px;
 }
 div.content>section .subGroup2>div.sub01>.menu>.btnWrap>.bk{
   background: linear-gradient(#999, #000);
@@ -306,16 +315,12 @@ div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fl>div{
   font-weight: bold;
   text-align: center;
   border-right: 1px solid #eee;
-  padding-right: 15px;  
+  padding-right: 15px;
 }
 div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fl>.group{
   height: 20px;
   display: flex;
   justify-content: center;
-
-}
-div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fl>.group>p{
-
 }
 div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fl>.group>.graph{
   margin: 6.5px 10px;
@@ -334,31 +339,129 @@ div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fl>.group>.gra
 div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fl>div>span{
   font-weight: bold; color: #000;
 }
-div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fr{
-
-}
+div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fr{}
 div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fr>u{}
 div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fr>.btn{
-
+  font-size: 10px;
 }
 div.content>section .subGroup2>div.sub01>.mission>.open>.summary>.fr>h4{
-  font-weight: bold;
+  font-weight: bold; color: #333;
+  cursor: pointer;
 }
   /* sub01의 미션목록 */
-div.content>section .subGroup2>div.sub01>.mission>.open>.mssList{}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList{
+  display: flex;
+  justify-content: space-between;
+}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div{
+  width: 50%;
+}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>.fl{}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>.fr{
+  border-left: 2px solid #ddd;
+}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>.fr>.msList{
+  padding-left: 10px;
+}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div>.msList{
+  display: flex;
+  justify-content: flex-start;
+  padding: 7.5px 0; height: 42px;
+  border-bottom: 2px solid #eee;
+}
+
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div>.ml1>.graph>.achieve{width: 43%;}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div>.ml2>.graph>.achieve{width: 33%;}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div>.ml3>.graph>.achieve{width: 0%;}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div>.ml4>.graph>.achieve{width: 55%;}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div>.ml5>.graph>.achieve{width: 66%;}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div>.ml6>.graph>.achieve{width: 0%;}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div>.ml7>.graph>.achieve{width: 36%;}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div>.ml8>.graph>.achieve{width: 100%;}
+
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div>.msList>.graph{
+  width: 100px; height: 25px;
+  position: relative;
+  background-color: #ddd;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 1px -1px 1px rgba(0,0,0,0.3);
+}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div>.msList>.graph>.achieve{
+  width: 43%; height: 100%;
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  background-color: #888;
+  color: #fff; font-weight: bold;
+  line-height: 25px; text-indent: 10px;
+}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div>.ml1>.graph>.achieve{width: 43%;}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div>.ml2>.graph>.achieve{width: 33%;}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div>.ml3>.graph>.achieve{width: 0%;}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div>.ml4>.graph>.achieve{width: 55%;}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div>.ml5>.graph>.achieve{width: 66%;}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div>.ml6>.graph>.achieve{width: 0%;}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div>.ml7>.graph>.achieve{width: 36%;}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div>.ml8>.graph>.achieve{width: 100%;}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div>.msList>h4{
+  font-weight: bold; line-height: 25px;
+  margin: 0 10px; color: #000;
+}
+div.content>section .subGroup2>div.sub01>.mission>.open>.mssList>div>.msList>button{
+  height: 25px;
+  font-size: 12px; font-weight: bold;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
   /* sub01의 미션 공지사항 */
-div.content>section .subGroup2>div.sub01>.mission>.open>ul{}
+div.content>section .subGroup2>div.sub01>.mission>.open>ul{
+  padding: 10px 0;
+
+}
 div.content>section .subGroup2>div.sub01>.mission>.open>ul>li{
   list-style: initial;
+  margin-left: 20px;
 }
-div.content>section .subGroup2>div.sub01>.mission>.close{}
-div.content>section .subGroup2>div.sub01>.mission>.close>.ttl{}
-div.content>section .subGroup2>div.sub01>.mission>.close>.btn{}
+div.content>section .subGroup2>div.sub01>.mission>.close{
+  display: flex;
+  justify-content: center;
+  line-height: 40px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+div.content>section .subGroup2>div.sub01>.mission>.close>.ttl{
+  line-height: 40px; font-weight: bold;
+  color: #000;
+}
+div.content>section .subGroup2>div.sub01>.mission>.close>.btn{
+  margin-left: 10px;
+}
 
 /* sub01의 수강중인 강좌 */
-div.content>section .subGroup2>div.sub01>.ing{}
-div.content>section .subGroup2>div.sub01>.ing>.header{}
-div.content>section .subGroup2>div.sub01>.ing>.header>h2{}
-div.content>section .subGroup2>div.sub01>.ing>.header>span{}
-div.content>section .subGroup2>div.sub01>.ing>.btnWrap{}
-div.content>section .subGroup2>div.sub01>.ing>.btnWrap>button{}
+div.content>section .subGroup2>div.sub01>.ing{
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 40px;
+}
+div.content>section .subGroup2>div.sub01>.ing>.header{
+
+}
+div.content>section .subGroup2>div.sub01>.ing>.header>h2{
+  font-size: 16px; color: #000;
+  font-weight: bold;
+}
+div.content>section .subGroup2>div.sub01>.ing>.btnWrap{
+}
+div.content>section .subGroup2>div.sub01>.ing>.btnWrap>button{
+  height: 30px; line-height: 25px;
+  background: linear-gradient(#fff, #eee);
+  border: 1px solid #eee; border-radius: 3px;
+  font-size: 12px; color: #000; font-weight: bold;
+  cursor: pointer;
+  margin-left: 5px;
+}
