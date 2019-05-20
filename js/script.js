@@ -11,7 +11,7 @@ $(function(){
       });
   //header 메뉴 클릭시 addClass.clicked입니다//
 
-// section의 .nav 아코디언 효과
+// section>.nav 아코디언 효과
 var $gnb = $('div.nav .gnb');
 var $lnb = $('div.nav .close .lnb');
 
@@ -25,5 +25,33 @@ $gnb.click(function(){
       $(this).next().slideUp();
     }
   });
-// section의 .nav 아코디언 효과//
+// section>.nav 아코디언 효과//
+
+// section>.tapMenu 효과
+var $tab = $('div.tabMenu>.tabGroup>li'),
+    $sub = $('div.tabMenu>.subGroup>div'),
+    $tab2 = $('div.sub1>.tabGroup2>li'),
+    $sub2 = $('div.sub1>.subGroup2>div');
+var i = 0;
+
+$tab.click(function(){ //대분류 탭 효과
+  i = $(this).index();
+  $sub.hide();
+  $sub.eq(i).show();
+  $('*').removeClass('clicked2');
+  $(this).addClass('clicked2');
+  $('.tabGroup2').find('li:first').addClass('clicked2');
+});
+
+$tab2.click(function(){ //소분류 탭 효과
+  $('.hideTab').hide();
+  i = $(this).index();
+  $sub2.hide();
+  $sub2.eq(i).show();
+
+  $('*').removeClass('clicked3');
+  $(this).addClass('clicked3');
+});
+// section>.tapMenu 효과//
+
 });

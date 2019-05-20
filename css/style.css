@@ -138,8 +138,73 @@ div.content>section>.nav>.navGroup>.shadowWrap>.close>.gnb>.ttl{
 div.content>section>.nav>.navGroup>.shadowWrap>.close>.gnb>.ttl>span{
   color: #999;
 }
-/* content>section>tapMenu*/
-div.content>section>.tapMenu{
+/* content>section>tabMenu*/
+div.content>section>.tabGroup{
   float: left;
   margin-left: 50px;
 }
+/* content>section>tapMenu>공지사항*/
+div.content>section>.tabGroup>.notice{
+  overflow: hidden;
+}
+div.content>section>.tabGroup>.notice>header{
+  float: left; overflow: hidden;
+  color: #000;
+}
+div.content>section>.tabGroup>.notice>header>u{
+  float: left; font-weight: bold;
+}
+div.content>section>.tabGroup>.notice>header>.btn{
+  float: left; margin-left: 10px;
+}
+div.content>section>.tabGroup>.notice>.segment{
+  float: left; margin-left: 10px;
+}
+/* content>section>tapMenu>대분류 tab title부분*/
+div.content>section>.tabGroup>.tabMenu{
+  width: 950px;
+  padding: 20px 0 40px;
+}
+div.content>section>.tabGroup>.tabMenu>.tabGroup{
+  display: flex;
+  justify-content: space-between;
+}
+div.content>section>.tabGroup>.tabMenu>.tabGroup>li{
+  width: 25%; height: 40px;  margin: 0 1px;
+  border: 1px solid #bbb;
+  background: linear-gradient(#eee, #ccc);
+  text-align: center; font-weight: bold;
+  line-height: 40px; color: #000; font-size: 14px;
+  cursor: pointer;
+}
+div.content>section>.tabGroup>.tabMenu>.tabGroup>li.clicked2{
+    background: linear-gradient(#333, #000); color: #fff;
+}
+/* content>section>subGroup 대분류 tab title(인터넷강의)에 관한 소분류 tab title */
+div.content>section>.tabGroup>.tabMenu>.subGroup{
+  padding-top: 30px;
+}
+div.content>section>.tabGroup>.tabMenu>.subGroup>.tabMenu{}
+div.content>section>.tabGroup>.tabMenu>.subGroup>.tabMenu>.tabGroup2{
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+}
+div.content>section>.tabGroup>.tabMenu>.subGroup>.tabMenu>.tabGroup2>li{
+  width: 25%; height: 40px; margin: 0 2px;
+  box-shadow: 2px 1px 2px rgba(0,0,0,0.2);
+  border-radius: 5px 5px 0 0;
+  background-color: #eee;
+  text-align: center; font-weight: bold;
+  line-height: 40px; color: #000;
+  cursor: pointer;
+}
+div.content>section>.tabGroup>.tabMenu>.subGroup>.tabMenu>.tabGroup2>li.clicked3{
+  background-color: #fff;
+}
+/* content>section>subGroup 소분류 tab title(환급반)내용 */
+div.content>section>.tabGroup>.tabMenu>.subGroup>.tabMenu>.subGroup2{}
+div.content>section>.tabGroup>.tabMenu>.subGroup>.tabMenu>.subGroup2>div.sub01{}
+div.content>section>.tabGroup>.tabMenu>.subGroup>.tabMenu>.subGroup2>div.sub01>.stdProgram{}
+div.content>section>.tabGroup>.tabMenu>.subGroup>.tabMenu>.subGroup2>div.sub01>.menu{}
+div.content>section>.tabGroup>.tabMenu>.subGroup>.tabMenu>.subGroup2>div.sub01>.mission{}
