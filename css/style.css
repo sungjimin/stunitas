@@ -20,14 +20,20 @@ div.content>header>.topMenu{
 }
 div.content>header>.topMenu>.list{}
 div.content>header>.topMenu>.list>li{
-  font-weight: bold;
+  font-weight: bold; cursor: pointer;
 }
 div.content>header>.topMenu>.list>li.clicked{
-  text-decoration: underline;
+  text-decoration: underline; color: #000;
+}
+div.content>header>.topMenu>.list>li:hover{
+  color: #000;
 }
 div.content>header>.topMenu>.iconWrap{}
 div.content>header>.topMenu>.iconWrap>div{
   width: 15px; text-align: center;
+}
+div.content>header>.topMenu>.iconWrap>div:hover{
+  color: #000;
 }
 div.content>header>.topMenu>.iconWrap>div:not(.ic02){
   font-size: 13px;
@@ -49,10 +55,15 @@ div.content>header>nav>.menu>div{
   background-size: cover;
   background-position: center;
 }
+div.content>header>nav>.menu>div{}
 div.content>header>nav>.menu>.icon1{background-image: url('../img/mIcon01.png');}
-div.content>header>nav>.menu>.icon2{background-image: url('../img/mIcon02.png');}
+div.content>header>nav>.menu>.icon2{background-image: url('../img/mIcon04.png');}
 div.content>header>nav>.menu>.icon3{background-image: url('../img/mIcon03.png');}
 div.content>header>nav>.menu>.icon4{background-image: url('../img/mIcon04.png');}
+div.content>header>nav>.clicked>.icon1.selected{background-image: url('../img/sIcon02.png');}
+div.content>header>nav>.clicked>.icon2.selected{background-image: url('../img/mIcon02.png');}
+div.content>header>nav>.clicked>.icon3.selected{background-image: url('../img/sIcon03.png');}
+div.content>header>nav>.clicked>.icon4.selected{background-image: url('../img/sIcon04.png');}
 div.content>header>nav>.menu>h3{
   float: left; height: 20px;
   margin-top: 10px;
