@@ -1,0 +1,38 @@
+/* index_style.css */
+div.wrap{}
+
+/* header */
+div.wrap>header{}
+    /* 사용자정보영역 */
+div.wrap>header>.boxInfo{}
+div.wrap>header>.boxInfo>.info{}
+div.wrap>header>.boxInfo>img{}
+    /* 사용자메뉴영역 */
+div.wrap>header>.topMenu{}
+div.wrap>header>.topMenu>.listWrap{}
+div.wrap>header>.topMenu>.listWrap>li{}
+div.wrap>header>.topMenu>.listWrap>li.now{}
+div.wrap>header>.topMenu>.iconWrap{}
+div.wrap>header>.topMenu>.iconWrap>.icMenu{}
+    /* 네비게이션영역 공통*/
+div.wrap>header>nav{}
+div.wrap>header>nav>.open{}
+div.wrap>header>nav>div>.navIcon{}
+div.wrap>header>nav>div>.gnb{}
+div.wrap>header>nav>div>.gnb>.ttl{}
+div.wrap>header>nav>div>.gnb>.ttl>span{}
+div.wrap>header>nav>div>.gnb>.btn{}
+div.wrap>header>nav>div>.lnb{}
+div.wrap>header>nav>div>.lnb>li{}
+        /* 네비게이션영역 > 현재 열린 탭 */
+div.wrap>header>nav>.open{}
+div.wrap>header>nav>.open>.navIcon{}
+div.wrap>header>nav>.open>p{}
+        /* 네비게이션영역 > 닫힌 탭 */
+div.wrap>header>nav>.close{}
+div.wrap>header>nav>.close>.navIcon{}
+/* header End */
+
+/* content - internet */
+div.wrap>.content{}
+/* content End */
