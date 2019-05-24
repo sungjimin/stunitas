@@ -1,0 +1,186 @@
+.content .tabMenu>.subGroup>.tabMenu .cList>.close>.hdr{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.content .tabMenu>.subGroup>.tabMenu .cList>.close>.hdr>strong{
+    line-height: 25px;
+    color: #000;
+}
+.content .tabMenu>.subGroup>.tabMenu .cList>.close .fold{
+    display: none;
+    line-height: 45px; cursor: pointer;
+}
+.content .tabMenu>.subGroup>.tabMenu .cList>.close .more{
+    line-height: 45px; cursor: pointer;
+}
+
+
+/* content2.css */
+.content.academy{
+    margin: 80px auto;
+}
+.content .tabMenu>.subGroup>.sub2{}
+.content .tabMenu>.subGroup>.sub2>.cList{}
+.content .tabMenu>.subGroup>.sub2>.cList:nth-child(2){
+    margin-top: 50px;
+}
+.content .tabMenu>.subGroup>.sub2>.cList>.close{}
+.content .tabMenu>.subGroup>.sub2>.cList>.close>.hdr{
+    border-top: 2px solid #222;
+}
+.content .tabMenu>.subGroup>.sub2>.cList>.close>.hdr>button{
+    width: 80px; height: 25px;
+}
+.content .tabMenu>.subGroup>.sub2>.cList>.close>.segWrap{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.content .tabMenu>.subGroup>.sub2>.cList>.close>.segWrap>.seg{
+    overflow: hidden;
+}
+.content .tabMenu>.subGroup>.sub2>.cList>.close>.segWrap>.seg>li{
+    float: left; line-height: 45px;
+}
+.content .tabMenu>.subGroup>.sub2>.cList>.close>.segWrap>.seg>li.divBar{
+    margin: 0 30px;
+}
+.content .tabMenu>.subGroup>.sub2>.cList>.open{
+    overflow: hidden;
+}
+.content .tabMenu>.subGroup>.sub2>.cList>.open>.table{
+    overflow: hidden;
+    line-height: 45px; color: #222;
+    border-bottom: 1px solid #ccc;
+}
+.content .tabMenu>.subGroup>.sub2>.cList>.open>.table>ul{
+    float: left;
+}
+.content .tabMenu>.subGroup>.sub2>.cList>.open>.table>ul>li{
+    border-bottom: 1px solid #eee;
+}
+.content .tabMenu>.subGroup>.sub2>.cList>.open>.table>ul>li:last-child{
+    height: 80px; line-height: 80px;
+}
+.content .tabMenu>.subGroup>.sub2>.cList>.open>.table>.ttl{
+    width: 110px; padding-left: 10px;
+    font-weight: bold;
+    background-color: #f9f9f9;
+}
+.content .tabMenu>.subGroup>.sub2>.cList>.open>.table>.ctt{}
+.content .tabMenu>.subGroup>.sub2>.cList>.open>.table>.ctt>li{
+    padding-left: 20px;
+}
+.content .tabMenu>.subGroup>.sub2>.cList>.open>.table>.ctt>li:last-child{
+    padding: 13px 20px;
+    line-height: 18px;
+}
+.content .tabMenu>.subGroup>.sub2>.cList>.open>p{
+    height: 40px;
+    margin-top: 10px; text-indent: 16px;
+    float: left;
+}
+.content .tabMenu>.subGroup>.sub2>.cList>.open>button.gr{
+    width: 143px; height: 40px;
+    margin-top: 10px; float: right;
+}
+.content .tabMenu>.subGroup>.sub2>p{
+    margin: 40px 0;
+}
+
+/* content3.css */
+.content .tabMenu>.subGroup>.sub3{}
+.content .tabMenu>.subGroup>.sub3>.header{
+    display: flex;
+    justify-content: space-between;
+    line-height: 30px;
+}
+.content .tabMenu>.subGroup>.sub3>.header>h2{
+    font-size: 14px; font-weight: bold;
+    color: #111;
+}
+.content .tabMenu>.subGroup>.sub3>.header>div{
+    width: 560px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+}
+.content .tabMenu>.subGroup>.sub3>.header>div>p{
+
+}
+.content .tabMenu>.subGroup>.sub3>.header>div>p>span{
+    color: #000;
+}
+.content .tabMenu>.subGroup>.sub3>.header>div>.btnWrap{}
+.content .tabMenu>.subGroup>.sub3>.header>div>.btnWrap>button{
+    width: 117px; height: 27px;
+    margin-left: 8px;
+}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList{
+    margin-top: 30px;
+}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList>.close{
+    display: flex;
+    justify-content:space-between;
+    border-bottom: 2px solid #222;
+}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList>.open{}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList>.open>.table>ul{
+    display: flex; justify-content: space-between;
+    width: 100%; color: #222;
+}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList>.open>.table>.ttl{
+    height: 36px; line-height: 35px;
+    border-bottom: 1px solid #ccc;
+}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList>.open>.table>.ctt{
+    height: 65px; line-height: 16px;
+    border-bottom: 1px dotted #555;
+}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList>.open>.table>ul>li{
+    width: 80px; margin: auto 0;
+}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList>.open>.table>ul>li:nth-child(3){
+    width: 460px;
+}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList>.open>.table>ul>li:nth-child(3)~*{
+    border-left: 1px dotted #555; text-align: center;
+}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList>.open>.table>.ctt>.center{
+    color: #555; margin: 0;
+    padding: 20px 0;
+}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList>.open>.table>ul>.center>button{
+    width: 62px; height: 23px;
+    font-size: 11px; line-height: 19px;
+}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList>.open>.table>ul>.center>.gr{
+    border: 1px solid #000;
+}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList>.open>.table>ul>.center>.wh{
+    margin-top: 5px;
+    border: 1px solid #ddd;
+}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList>.open>.table>.ctt>.bt{padding: 15px 0;}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList>.open>.table>.ctt>.ct{padding: 24px 0;}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList>.open>.table>.ctt>li.center:last-child{padding: 7px 0;}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList>.open>.notice>li{
+    height: 23px;
+    line-height: 23px;
+    display: flex;
+    justify-content: flex-start;
+}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList>.open>.notice>li>div{
+    width: 20px; height: 20px;
+    margin: auto 2.5px;
+    background-size: cover; cursor: pointer;
+}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList>.open>.notice>li>.dwn1{background-image: url('../img/ct3li1.png');}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList>.open>.notice>li>.dwn2{background-image: url('../img/ct3li2.png');}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList>.open>.notice>li>button{
+    width: 72px; height: 23px;
+    margin-left: 5px;
+    line-height: 19px; font-size: 11px;
+}
