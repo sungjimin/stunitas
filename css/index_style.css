@@ -1,14 +1,13 @@
 /* index_style.css */
 div.wrap{
     position: relative;
+    padding: 0 0 200px;
 }
-
 /* header */
 div.wrap>header{
     width: 182px;
     position: absolute;
     left: 0; top: 0;
-    border: 1px solid red;
 }
 div.wrap>header>div{
     display: flex;
@@ -25,6 +24,7 @@ div.wrap>header>.boxInfo>.info{
 div.wrap>header>.boxInfo>.info>*{
     font-size: 13px;
     line-height: 18px;
+    color: #000;
 }
 div.wrap>header>.boxInfo>img{
     cursor: pointer;
@@ -51,188 +51,724 @@ div.wrap>header>.topMenu>.iconWrap>.icMenu{
 }
 
     /* 네비게이션영역 공통*/
-div.wrap>header>nav{}
-div.wrap>header>nav>.open{}
-div.wrap>header>nav>div>.navIcon{}
-div.wrap>header>nav>div>.gnb{}
-div.wrap>header>nav>div>.gnb>.ttl{}
-div.wrap>header>nav>div>.gnb>.ttl>span{}
+div.wrap>header>nav{
+     box-shadow: 2px 3px 2px rgba(0,0,0,0.2);
+}
+div.wrap>header>nav>div{
+    padding: 0 17px;
+    position: relative;
+}
+div.wrap>header>nav>.open{
+    background-color: #eb6202; color: #fff;
+}
+div.wrap>header>nav>div>.navIcon{
+    width: 24px; height: 28px;
+    position: absolute;
+    z-index: 10;
+    top: 57px; right: -12px;
+    background-image: url('../img/iconPicture.png');
+    background-size: cover;
+    background-position: center;
+}
+div.wrap>header>nav>div>.gnb{
+    display: flex;
+    justify-content: space-between;
+    line-height: 64px;
+    cursor: pointer;
+}
+div.wrap>header>nav>div>.gnb>.ttl{
+     color: #000;
+     font-size: 14px; font-weight: bold;
+}
+div.wrap>header>nav>div>.gnb>.ttl>span{
+     color: #999;
+}
 div.wrap>header>nav>div>.gnb>.btn{}
-div.wrap>header>nav>div>.lnb{}
-div.wrap>header>nav>div>.lnb>li{}
+div.wrap>header>nav>div>.lnb{
+    margin-left: 33px;
+    padding: 10px 0;
+}
+div.wrap>header>nav>div>.lnb>li{
+    line-height: 26px; font-size: 13px;
+}
         /* 네비게이션영역 > 현재 열린 탭 */
-div.wrap>header>nav>.open{}
-div.wrap>header>nav>.open>.navIcon{}
-div.wrap>header>nav>.open>p{}
+div.wrap>header>nav>.open>.gnb>.ttl{color: #fff;}
+div.wrap>header>nav>.open>.gnb>.ttl>span{color: #fff;}
+div.wrap>header>nav>.open>p{
+    font-family: 'Adobe Myungjo std','HCR Batang', serif;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 15px 0 25px;
+    margin-left: 33px;
+}
         /* 네비게이션영역 > 닫힌 탭 */
 div.wrap>header>nav>.close{}
-div.wrap>header>nav>.close>.navIcon{}
+div.wrap>header>nav>.close>.gnb{
+     border-bottom: 1px solid #ddd;
+}
 /* header End */
 
 /* content - header */
-div.wrap>.content{}
+div.wrap>.content{
+}
 div.wrap>.content>header{}
-div.wrap>.content>header>.hdrWrap{}
-div.wrap>.content>header>.hdrWrap>h1{}
-div.wrap>.content>header>.hdrWrap>.topMenu{}
-div.wrap>.content>header>.hdrWrap>.topMenu>li{}
-div.wrap>.content>header>nav{}
-div.wrap>.content>header>nav>.menu{}
+div.wrap>.content>header>.hdrWrap{
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+div.wrap>.content>header>.hdrWrap>h1{
+    font-family: 'Adobe Myungjo std','HCR Batang', serif;
+    font-size: 36px; color: #000; font-weight: bold;
+    line-height: 50px;
+}
+div.wrap>.content>header>.hdrWrap>.topMenu{
+    width: 174px;
+    display: flex;
+    justify-content: space-between;
+}
+div.wrap>.content>header>.hdrWrap>.topMenu>li{
+    font-weight: bold; cursor: pointer;
+}
+div.wrap>.content>header>.hdrWrap>.topMenu>li.divBar{
+    color: #bbb;
+}
+div.wrap>.content>header>nav{
+    width: 600px;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+div.wrap>.content>header>nav>.menu{
+    overflow: hidden; cursor: pointer;
+}
+div.wrap>.content>header>nav>.menu>ul{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
 div.wrap>.content>header>nav>.menu.clicked{}
-div.wrap>.content>header>nav>.menu>div{}
-div.wrap>.content>header>nav>.menu>.icon1{}
-div.wrap>.content>header>nav>.menu>.icon2{}
-div.wrap>.content>header>nav>.menu>.icon3{}
-div.wrap>.content>header>nav>.menu>.icon4{}
-div.wrap>.content>header>nav>.menu>h3{}
+div.wrap>.content>header>nav>.menu>.ic{
+    height: 24px;
+    background-repeat: no-repeat;
+    float: left;
+}
+div.wrap>.content>header>nav>.menu>.divBar{
+    font-size: 18px; line-height: 20px;
+    margin: 0 26px;
+    color: #ccc;
+    float: left;
+}
+div.wrap>.content>header>nav>.menu>.icon1{background-image: url('../img/tab01.png');width:117px;}
+div.wrap>.content>header>nav>.menu>.icon2{background-image: url('../img/tab02.png');width:71px;}
+div.wrap>.content>header>nav>.menu>.icon3{background-image: url('../img/tab03.png');width:71px;}
+div.wrap>.content>header>nav>.menu>.icon4{background-image: url('../img/tab04.png');width:87px;}
+div.wrap>.content>header>nav>.menu>.icon1.selected{background-image: url('../img/tabC01.png');}
+div.wrap>.content>header>nav>.menu>.icon2.selected{background-image: url('../img/tabC02.png');}
+div.wrap>.content>header>nav>.menu>.icon3.selected{background-image: url('../img/tabC03.png');}
+div.wrap>.content>header>nav>.menu>.icon4.selected{background-image: url('../img/tabC04.png');}
+div.wrap>.content>header>nav>.menu>h3{
+    font-size: 17px; font-weight: bold;
+}
 /* content - section */
 div.wrap>.content>section{}
     /* 공지사항 */
-div.wrap>.content>section>.notice{}
+div.wrap>.content>section>.notice{
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 0;
+}
 div.wrap>.content>section>.notice>header{}
-div.wrap>.content>section>.notice>header>u{}
-div.wrap>.content>section>.notice>header>.btn{}
-div.wrap>.content>section>.notice>.segWrap{}
-div.wrap>.content>section>.notice>.segWrap>.segment{}
+div.wrap>.content>section>.notice>header>u{
+    font-weight: bold;
+}
+div.wrap>.content>section>.notice>header>i{
+    margin: 0 5px;
+}
+div.wrap>.content>section>.notice>.segWrap{
+    height: 20px; overflow: hidden;
+}
+div.wrap>.content>section>.notice>.segWrap>.segment{
+    text-indent: 5px;
+}
     /* tab메뉴 */
 div.wrap>.content>section>.tabMenu{}
-div.wrap>.content>section>.tabMenu>.tabGroup{}
-div.wrap>.content>section>.tabMenu>.tabGroup>li{}
-div.wrap>.content>section>.tabMenu>.tabGroup>li.clicked2{}
-div.wrap>.content>section>.tabMenu>.subGroup{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.tabGroub2{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.tabGroub2>li{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.tabGroub2>li.clicked3{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.stdProgram{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.stdProgram>.hdr{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.stdProgram>.eClass{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.stdProgram>.eClass>.cl{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.stdProgram>.eClass>.cl>span{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.stdProgram>.eClass>.btn{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.menu{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.menu>.btnWrap{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.menu>.btnWrap>button{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.menu>.btnWrap>.wh{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.menu>.btnWrap>.bk{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.menu>.linkWrap{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.menu>.linkWrap>div{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.menu>.linkWrap>div>i{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.summary{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.summary>.fl{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.summary>.fl>div{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.summary>.fl>div>span{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.summary>.fl>.group{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.summary>.fl>.group>p{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.summary>.fl>.group>.graph{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.summary>.fl>.group>.graph>.achieve{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.summary>div>.group>span{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.summary>.fr{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.summary>.fr>u{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.summary>.fr>.btn{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.summary>.fr>h4{}
+div.wrap>.internet>section>.tabMenu>.subGroup{
+    background-color: #f5f5f5;
+    padding: 0; box-shadow: 0 0 0;
+}
+div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu.sub2{
+    padding: 30px 20px 40px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu.sub3{
+    padding: 30px 20px 40px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu.sub4{
+    padding: 30px 20px 40px;
+    border-radius: 4px;
+    background-color: #ccc;
+    text-align: center;
+}
+div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.tabGroup2{
+    width: 430px;
+    display: flex;
+    justify-content: space-between;
+}
+div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.tabGroup2>li{
+    width: 25%; height: 35px;
+    margin-right: 2px;
+    box-shadow: 2px 0 2px rgba(0,0,0,0.2);
+    border-radius: 5px 5px 0 0;
+    background-color: #eee;
+    text-align: center; font-weight: bold;
+    line-height: 35px; color: #000;
+    cursor: pointer;
+}
+div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.tabGroup2>li.clicked3{
+     background-color: #fff;
+}
+div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2{
+    background-color: #fff; padding: 20px 20px 75px;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01{}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission{}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open{}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.stdProgram{
+    overflow: hidden; color: #000;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.stdProgram>.hdr{
+    width: 130px; height: 40px;
+    float: left;
+    line-height: 35px; text-align: center;
+    font-weight: bold; color: #000;
+    border-radius: 5px 0 0 5px; border: 2px solid #eee;
+    background-color: #f5f5f5;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.stdProgram>.hdr>span{
+    font-weight: bold;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.stdProgram>.eClass{
+    width: calc(100% - 130px);
+     height: 40px;
+    float: left;
+    overflow: hidden;
+    line-height: 35px;
+    border-radius: 0 5px 5px 0;
+    border: 2px solid #eee;
+    border-left: none;
+    background: linear-gradient(#fbfbfb, #f9f9f9);
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.stdProgram>.eClass>.cl{
+    width: calc(100% - 20px); float: left;
+    text-indent: 10px; cursor: pointer;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.stdProgram>.eClass>.cl>span{
+    font-weight: bold;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.stdProgram>.eClass>.btn{
+    color: #777;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.menu{
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.menu>.btnWrap{
+    width: 430px;
+    display: flex;
+    justify-content: space-around;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.menu>.btnWrap>button{
+    height: 25px;
+    margin-right: 5px;
+    line-height: 21px; font-weight: bold;
+    font-size: 11px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.menu>.btnWrap>.wh{
+    background: linear-gradient(#fff, #e7e7e7);
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.menu>.btnWrap>.wh>i{
+    margin-right: 30px;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.menu>.btnWrap>.bk{
+    background: linear-gradient(#515151, #161616);
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.menu>.linkWrap{
+    width: calc(100% - 430px);
+    overflow: hidden;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.menu>.linkWrap>div{
+    float: right;
+    line-height: 30px; font-weight: bold;
+    cursor: pointer;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.menu>.linkWrap>div>i{
+    margin-right: 10px; color: #888;
+}
+/* 미션 현황 요약 */
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.summary{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #ccc;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.summary>div{
+    display: flex;
+    justify-content: space-between;
+    width: calc(50% - 2px);
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.summary>.fl{}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.summary>.fl>div{
+    height: 12px; line-height: 10px;
+    font-weight: bold;
+    text-align: center;
+    border-right: 1px solid #eee;
+    padding-right: 9px;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.summary>.fl>div>span{
+    color: #000; font-weight: bold;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.summary>.fl>.group{
+    height: 12px;
+    display: flex;
+    justify-content: center;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.summary>.fl>.group>p{}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.summary>.fl>.group>.graph{
+    margin: 2.5px 10px;
+    width: 100px; height: 7px;
+    border-radius: 2px;
+    background-color: #ddd;
+    position: relative;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.summary>.fl>.group>.graph>.achieve{
+    width: 64%; height: 7px;
+    border-radius: 3px;
+    background: linear-gradient(#595959, #2f2f2f);
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.summary>.fr{
+     line-height: 10px;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.summary>.fr>h4{
+    color: #333;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+/* 미션 현황 영역 */
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.mssList{
+    display: flex;
+    justify-content: space-between;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.mssList>.fl{}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.mssList>.fr{
+    border-left: 1px solid #e5e5e5; padding-left: 10px;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.mssList>div{
+    width: 50%;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.mssList>div>.msList{
+    display: flex;
+    justify-content: flex-start;
+    padding: 8.5px 0; height: 40px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.mssList>div>.msList>.graph{
+    width: 100px; height: 23px;
+    position: relative;
+    background-color: #ddd;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 1px -1px 1px rgba(0,0,0,0.3);
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.mssList>div>.msList>.graph>.achieve{
+    width: 43%; height: 100%;
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    background-color: #888;
+    color: #fff; font-weight: bold;
+    line-height: 20px; text-indent: 10px;
+}
+.mssList>div>.ml1>.graph>.achieve{width: 43%;}
+.mssList>div>.ml2>.graph>.achieve{width: 33%;}
+.mssList>div>.ml3>.graph>.achieve{width: 0%;}
+.mssList>div>.ml4>.graph>.achieve{width: 55%;}
+.mssList>div>.ml5>.graph>.achieve{width: 66%;}
+.mssList>div>.ml6>.graph>.achieve{width: 0%;}
+.mssList>div>.ml7>.graph>.achieve{width: 36%;}
+.mssList>div>.ml8>.graph>.achieve{width: 100%;}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.mssList>div>.msList>h4{
+    font-weight: bold; line-height: 20px;
+    margin: 0 10px; color: #000;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>.mssList>div>.msList>button{
+    height: 23px;
+    border: 1px solid #ddd;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>ul{
+     padding: 15px 0;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.open>ul>li{
+    list-style: disc;
+    margin-left: 20px;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.close{
+    display: flex;
+    justify-content: center;
+    line-height: 40px;
+    background:linear-gradient(#fbfbfb, #f9f9f9);
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.close>.ttl{
+    line-height: 40px; font-weight: bold;
+    color: #000;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>.sub01>.mission>.close>.btn{margin-left: 10px;}
 
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.mssList{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.mssList>.fl{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.mssList>.fr{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.mssList>div{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.mssList>div>.msList{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.mssList>div>.msList>.graph{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.mssList>div>.msList>.graph>.achieve{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.mssList>div>.msList>.graph>.achieve>span{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.mssList>div>.msList>h4{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>.mssList>div>.msList>button{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>ul{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.open>ul>li{}
+/* 수강중인 강좌 영역 */
+.subGroup2>.sub01>.ing{}
+.subGroup2>.sub01>.ing>.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    line-height: 30px;
+}
+.subGroup2>.sub01>.ing>.header>h2{
+    font-size: 16px; color: #000;
+    font-weight: bold;
+}
+.subGroup2>.sub01>.ing>.header>.btnWrap>button{
+    height: 30px; line-height: 25px;
+    background: linear-gradient(#fff, #e7e7e7);
+    border: 1px solid #d5d5d5;
+    margin-left: 5px;
+    font-size: 11px; font-weight: bold;
+}
+.subGroup2>.sub01>.ing>.header>.btnWrap>button>i{font-size: 10px;}
+.subGroup2>.sub01>.ing>.tabMenu{}
+.subGroup2>.sub01>.ing>.tabMenu>.tabGroup3{
+    width: 185px;
+    display: flex;
+    justify-content: space-between;
+}
+.subGroup2>.sub01>.ing>.tabMenu>.tabGroup3>li{
+    font-size: 14px; line-height: 14px;
+    color: #999; font-weight: bold;
+    cursor: pointer;
+}
+.subGroup2>.sub01>.ing>.tabMenu>.tabGroup3>li:nth-child(2){
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    padding: 0 18px;
+}
+.subGroup2>.sub01>.ing>.tabMenu>.tabGroup3>li.clicked4{color: #000;}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3{}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu{}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.tabGroup4{
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-top: 14px;
+}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.tabGroup4>li{
+    float: left;
+    margin-right: 20px;
+    line-height: 40px; font-weight: bold;
+    color: #999;
+    cursor: pointer;
+}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.tabGroup4>li.clicked5{color: #000;}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4{}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>div{}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01{}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.sltFilter{
+    width: 490px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.sltFilter>.ft{}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.sltFilter>.ft>.gf{
+    width: 120px;
+    border-radius: 3px;
+    background-color: #fafafa;
+    border: 1px solid #eee;
+}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.sltFilter>.ft>.gf>.ftWrap{
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.sltFilter>.ft>.gf>.ftWrap>*{
+    height: 25px;
+    line-height: 25px;
+}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.sltFilter>.ft>.gf>.ftWrap>h5{color: #222;}
 
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.close{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.close>.ttl{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.mission>.close>.btn{}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.sltFilter>.ft>.gf>.lf{
+    width: 120px;
+    margin-left: -1px;
+    background-color: #fff;
+    border: 1px solid #777;
+    display: none;
+}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.sltFilter>.ft>.gf>.lf>li{
+    line-height: 24px;
+    text-indent: 20px;
+}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.sltFilter>.ft>.gf>.lf>li.sf{background-color: #ebebeb;}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.sltFilter>.shape{
+    width: 10px; height: 25px;
+    position: absolute;
+    z-index: 10;
+    top: 1px; left: 119px;
+    background-image: url('../img/filterShape.png');
+}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.lstFilter{
+    width: 320px;
+    display: flex; justify-content:space-between;
 
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.header{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.header>h2{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.header>h2.btnWrap{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.header>h2.btnWrap>button{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.header>h2.btnWrap>button>i{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.header>h2.btnWrap>button>i{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.tabGroup3{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.tabGroup3>li{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.tabGroup3>li.clicked4{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.tabGroup4{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.tabGroup4>li{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.tabGroup4>li.clicked5{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>div{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.sltFilter{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.sltFilter>.ft{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.sltFilter>.ft>.gf{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.sltFilter>.ft>.gf>h5{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.sltFilter>.ft>.gf>.btn{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.sltFilter>.ft>.gf>.lf{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.sltFilter>.ft>.gf>.lf>li{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.sltFilter>.ft>.gf>.lf>li.sf{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.sltFilter>.shape{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.lstFilter{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.lstFilter>div{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.lstFilter>div>h5{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.lstFilter>div>.btn{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.teacher{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.teacher>.tcName{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.teacher>.tcName>img{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.teacher>.tcName>h3{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.teacher>.tcPic{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.teacher>.tcPic>.tag{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.teacher>.tcPic>.pic{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.info{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.info>.hdr{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.info>.hdr>.base{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.info>.hdr>h2{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.info>.hdr>h4{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.info>.seg{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.info>.seg>h3{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.info>.seg>h3>span{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.info>.seg>.graphWrap{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.info>.seg>.graphWrap>.bar{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.info>.seg>.graphWrap>.bar>.gage{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.info>.seg>.graphWrap>span{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.info>.seg>.btnWrap{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.info>.seg>.btnWrap>.btn{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.info>.seg>.btnWrap>.btn>img{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.info>.seg>.btnWrap>.btn>.ttl{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.view{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.view>.del{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.view>.del>.delete{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.view>.del>.mark{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.view>.del>.color{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.view>button.wh{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.view>.play{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.view>.play>.plC{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.cardWrap>.card>.view>.play>h2{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.pageNum{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.pageNum>.btn{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.pageNum>.btn>li{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.pageNum>.btn>.fl{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.pageNum>.btn>.fr{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.pageNum>.dbPage{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.pageNum>.onePage{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.pageNum>.numWrap{}
-div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroub2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.pageNum>.numWrap>li{}
+}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.lstFilter>li{
+    color: #222; line-height: 25px;
+}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.lstFilter>li>i{
+    margin-left: 5px; color: #777;
+}
+.cardWrap{}
+.cardWrap>.card{
+    width: 863px; height: 158px;
+    display: flex; justify-content: space-between;
+    border: 1px solid #eee;
+    box-shadow: 1px 1px 2px rgba(0,0,0,.2);
+    margin-top: 20px;
+    padding: 20px 0;
+    padding-right: 15px;
+}
+.cardWrap>.card>div:not(.view){margin-right: 2px;}
+.cardWrap>.card>.teacher{
+    width: 204px;
+}
+.cardWrap>.card>.teacher>.tcName{
+    padding-left: 24px; color: #000;
+}
+.cardWrap>.card>.teacher>.tcName>strong{
+    font-size: 13px;
+}
+.cardWrap>.card>.teacher>.tcPic{
+    height: 52px;
+    position: relative;
+    display: flex;
+    justify-content:flex-start;
+}
+.cardWrap>.card>.teacher>.tcPic>img{
+    margin-left: 25px; margin-top: 10px;
+}
+.cardWrap>.card>.teacher>.tcPic>strong{
+    font-size: 20px; color: #000;
+    line-height: 52px; text-indent: 10px;
+}
+.cardWrap>.card>.teacher>.tcPic>div{
+    background-size: cover;
+    background-position: center;
+}
+.cardWrap>.card>.teacher>.tcPic>div.tag{
+    width: 41px; height: 41px;
+    position: absolute;
+    bottom: -20px; left: 0;
+}
+.cardWrap>.card>.teacher>.tcPic>div.pic{
+    width: 133px; height: 121px;
+    position: absolute;
+    right: 0; bottom: -20px;
+}
+.cardWrap>.card>.teacher>.tcPic>.tag1{background-image: url('../img/new.png');}
+.cardWrap>.card>.teacher>.tcPic>.tag2{background-image: url('../img/unnew.png');}
+.cardWrap>.card>.teacher>.tcPic>.pic1{background-image: url('../img/teacher1.png');}
+.cardWrap>.card>.teacher>.tcPic>.pic2{background-image: url('../img/teacher2.png');}
+
+
+
+.cardWrap>.card>.info{
+    width: 420px;
+    position: relative;
+}
+.cardWrap>.card>.info>.hdr{
+    overflow: hidden;
+}
+.cardWrap>.card>.info>.hdr>button.gr{
+    width: 53px; height: 19px;
+    line-height: 15px;
+    border-radius: 0;
+    float: left; margin-top: 1px;
+}
+.cardWrap>.card>.info>.hdr>h2{
+    float: left; font-size: 16px;
+    font-weight: bold; color: #222;
+}
+.cardWrap>.card>.info>p{
+    padding-top: 15px; color: #999;
+}
+.cardWrap>.card>.info>.seg{
+    display: flex;
+    justify-content: flex-start;
+    width:384px;
+    line-height: 14px;
+    position: absolute;
+    bottom: 0;
+}
+.cardWrap>.card>.info>.seg>h3{
+    font-size: 13px; color: #222;
+    font-weight: bold;
+}
+.cardWrap>.card>.info>.seg>h3>span{
+    color: #aaa;
+}
+.cardWrap>.card>.info>.seg>.graphWrap{
+    overflow: hidden;
+}
+.cardWrap>.card>.info>.seg>.graphWrap>.bar{
+    margin: 3.5px 10px;
+    width: 100px;
+    height: 7px;
+    border-radius: 2px;
+    background-color: #ddd;
+    position: relative;
+    float: left;
+}
+.cardWrap>.card>.info>.seg>.graphWrap>.bar>.gage{
+    width: 53%;
+    height: 7px;
+    border-radius: 3px;
+    background: linear-gradient(#595959, #2f2f2f);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+.cardWrap>.card>.info>.seg>.graphWrap>.bar>.g1{width: 86%;}
+.cardWrap>.card>.info>.seg>.graphWrap>.bar>.g2{width: 25%;}
+.cardWrap>.card>.info>.seg>.graphWrap>span{
+    float: left;
+    color: #000; font-weight: bold; margin-right: 10px;
+}
+.cardWrap>.card>.info>.seg>.btnWrap{
+    overflow: hidden;
+}
+.cardWrap>.card>.info>.seg>.btnWrap>.btn{
+    overflow: hidden;
+    float: left;
+    cursor: pointer;
+}
+.cardWrap>.card>.info>.seg>.btnWrap>.btn:first-child{
+    border-right: 1px solid #ddd;
+}
+.cardWrap>.card>.info>.seg>.btnWrap>.btn:last-child>img{margin-left: 10px;}
+.cardWrap>.card>.info>.seg>.btnWrap>.btn>img{
+    float: left;
+    margin: 0 5px;
+}
+.cardWrap>.card>.info>.seg>.btnWrap>.btn:first-child>.ttl{margin-right: 10px;}
+
+.cardWrap>.card>.info>.seg>.btnWrap>.btn>.ttl{
+    float: left;
+}
+.cardWrap>.card>.info>.dotted{
+    width: 4px; height: 158px;
+    position: absolute;
+    top: -20px; bottom: 0; right: 0;
+    background-image: url('../img/dotted.png');
+}
+.cardWrap>.card>.view{
+    width: 232px;
+    padding-left: 15px;
+}
+.cardWrap>.card>.view>.del{
+    overflow: hidden;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 135px;
+    border-bottom: 1px dotted #ccc;
+    display: flex;
+    justify-content: flex-end;
+}
+.cardWrap>.card>.view>.del>*{
+
+}
+.cardWrap>.card>.view>.del>p{
+    cursor: pointer; color: #333; font-weight: bold;
+
+
+}
+.cardWrap>.card>.view>.del>.divBar{
+    padding: 0 10px;
+}
+.cardWrap>.card>.view>.del>.mark{
+    width: 14px; height: 14px;
+    margin: 11px 0 10px;
+    background-image: url('../img/starB.png');
+    cursor: pointer;
+}
+.cardWrap>.card>.view>.del>.mark.color{
+    background-image: url('../img/starC.png');
+}
+.cardWrap>.card>.view>button.wh{
+    margin-top: 19px;
+    background: linear-gradient(#fff, #e7e7e7);
+    height: 25px;
+    line-height: 21px; font-weight: bold;
+    font-size: 11px;
+    border-radius: 3px;
+    cursor: pointer;
+    float: right;
+}
+.cardWrap>.card>.view>button.wh>i{
+    margin-right: 30px;
+}
+.cardWrap>.card>.view>.play{
+    margin-top: 8px;
+    width: 192px; height: 38px;
+    background-color: #444;
+    float: right;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+.cardWrap>.card>.view>.play>.plC{
+    margin: 8.5px 0;
+    width: 18px; height: 21px;
+    background-size: cover;
+    background-image: url('../img/play.png');
+
+}
+.cardWrap>.card>.view>.play>h2{
+    text-indent: 10px; color: #fff;
+    font-size: 15px; font-weight: bold;
+    line-height: 38px;
+}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.pageNum{
+    margin-top: 60px;
+}
 
     /* content2.css 학원강의 */
 .content.academy{
-    margin: 80px auto;
+    margin: 150px auto;
 }
 .content .tabMenu>.subGroup>.sub2{}
 .content .tabMenu>.subGroup>.sub2>.cList{}

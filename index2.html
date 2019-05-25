@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index_style.css">
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -66,7 +69,6 @@
                     <p>인강도,학원강의도,<br>교재도 1위 영단기</p>
                 </div>
                 <div class="close">
-                    <div class="navIcon"></div>
                     <ul class="gnb">
                         <li class="ttl">
                             대기업 취업
@@ -82,7 +84,6 @@
                     </ul>
                 </div>
                 <div class="close">
-                    <div class="navIcon"></div>
                     <ul class="gnb">
                         <li class="ttl">
                             전문직 <span>(42)</span>
@@ -98,7 +99,6 @@
                     </ul>
                 </div>
                 <div class="close">
-                    <div class="navIcon"></div>
                     <ul class="gnb">
                         <li class="ttl">
                             자격증 <span>(49)</span>
@@ -114,7 +114,6 @@
                     </ul>
                 </div>
                 <div class="close">
-                    <div class="navIcon"></div>
                     <ul class="gnb">
                         <li class="ttl">
                             공무원 <span>(12)</span>
@@ -130,7 +129,6 @@
                     </ul>
                 </div>
                 <div class="close">
-                    <div class="navIcon"></div>
                     <ul class="gnb">
                         <li class="ttl">수능</li>
                         <li class="btn">
@@ -151,34 +149,36 @@
                     <h1>강의실</h1>
                     <ul class="topMenu">
                         <li>강의실</li>
+                        <li class="divBar">|</li>
                         <li>회원정보</li>
+                        <li class="divBar">|</li>
                         <li>장바구니</li>
                     </ul>
                 </div>
                 <nav>
-                    <div class="menu">
-                        <div class="icon1"></div>
-                        <h3>전체단기강좌</h3>
-                    </div>
-                    <div class="menu clicked">
-                        <div class="icon2 selected"></div>
-                        <h3>영단기</h3>
-                    </div>
-                    <div class="menu">
-                        <div class="icon3"></div>
-                        <h3>일단기</h3>
-                    </div>
-                    <div class="menu">
-                        <div class="icon4"></div>
-                        <h3>금융단기</h3>
-                    </div>
+                    <ul class="menu">
+                        <li class="ic icon1"></li>
+                        <li class="divBar">|</li>
+                    </ul>
+                    <ul class="menu">
+                        <li class="ic icon2 selected"></li>
+                        <li class="divBar">|</li>
+                    </ul>
+                    <ul class="menu">
+                        <li class="ic icon3"></li>
+                        <li class="divBar">|</li>
+                    </ul>
+                    <ul class="menu">
+                        <li class="ic icon4"></li>
+                        <li class="divBar">|</li>
+                    </ul>
                 </nav>
             </header>
             <section>
                 <div class="notice">
                     <header>
                         <u>공지사항</u>
-                        <div class="btn"><i class="fas fa-sort"></i></div>
+                        <i class="fas fa-sort"></i>
                     </header>
                     <div class="segWrap">
                         <div class="segment">
@@ -192,16 +192,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="tabGroup"> -->
-                <!-- <div class="notice">
-                        <header>
-                            <u>공지사항</u>
-                            <div class="btn"><i class="fas fa-sort"></i></div>
-                        </header>
-                        <div class="segment">
-                            [금융단기] 5/9 풀서비스 사전예약자 프리패스 당첨자 발표합니다.&nbsp;&nbsp;2014.08.05
-                        </div>
-                    </div> -->
                 <div class="tabMenu">
                     <ul class="tabGroup">
                         <li class="clicked2">인터넷강의</li>
@@ -271,7 +261,7 @@
                                                     <u>공지사항</u>
                                                     <div class="btn"><i class="fas fa-sort"></i></div>
                                                     <h4>
-                                                        [금융단기] 5/9 풀서비스 사전예약자 프리패스 당첨자 발..&nbsp;&nbsp;2014.08.05
+                                                        [금융단기] 5/9풀서비스 사전예약자 프리패스 당첨자.. &nbsp;2014.08.05
                                                     </h4>
                                                 </div>
                                             </div>
@@ -315,7 +305,7 @@
                                                             <div class="achieve"><span>0</span>/2</div>
                                                         </div>
                                                         <h4>압도적 적중특강 2회</h4>
-                                                        <button>적중특강 참여</button>
+                                                        <button class="wh">적중특강 참여</button>
                                                     </div>
                                                     <div class="msList ml7">
                                                         <div class="graph">
@@ -328,7 +318,7 @@
                                                             <div class="achieve">미션완료</div>
                                                         </div>
                                                         <h4>친구 2명과 적중특강 1회 함께 보기</h4>
-                                                        <button>친구확인</button>
+                                                        <button class="wh">친구확인</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -351,8 +341,8 @@
                                         <div class="header">
                                             <h2>수강중인 강좌 (10)</h2>
                                             <div class="btnWrap">
-                                                <button>일반강좌 추가&nbsp;&nbsp;<i class="fal fa-plus"></i></button>
-                                                <button>미션고득점부스터 추가&nbsp;&nbsp;<i class="fal fa-plus"></i></button>
+                                                <button class="wh">일반강좌 추가&nbsp;&nbsp;<i class="fal fa-plus"></i></button>
+                                                <button class="wh">미션고득점부스터 추가&nbsp;&nbsp;<i class="fal fa-plus"></i></button>
                                             </div>
                                         </div>
                                         <div class="tabMenu">
@@ -393,8 +383,8 @@
                                                                 <div class="sltFilter">
                                                                     <div class="ft ft1">
                                                                         <div class="gf">
+                                                                            <div class="ftWrap">
                                                                             <h5>미션</h5>
-                                                                            <div class="btn">
                                                                                 <i class="fas fa-caret-down"></i>
                                                                             </div>
                                                                             <ul class="lf">
@@ -405,11 +395,10 @@
                                                                             </ul>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="shape"></div>
                                                                     <div class="ft ft2">
                                                                         <div class="gf">
+                                                                            <div class="ftWrap">
                                                                             <h5>전체</h5>
-                                                                            <div class="btn">
                                                                                 <i class="fas fa-caret-down"></i>
                                                                             </div>
                                                                             <ul class="lf">
@@ -420,10 +409,11 @@
                                                                             </ul>
                                                                         </div>
                                                                     </div>
+                                                                    <div class="shape"></div>
                                                                     <div class="ft ft3">
                                                                         <div class="gf">
+                                                                            <div class="ftWrap">
                                                                             <h5>학습단계 전체</h5>
-                                                                            <div class="btn">
                                                                                 <i class="fas fa-caret-down"></i>
                                                                             </div>
                                                                             <ul class="lf">
@@ -436,8 +426,8 @@
                                                                     </div>
                                                                     <div class="ft ft4">
                                                                         <div class="gf">
+                                                                            <div class="ftWrap">
                                                                             <h5>내용추가 예정</h5>
-                                                                            <div class="btn">
                                                                                 <i class="fas fa-caret-down"></i>
                                                                             </div>
                                                                             <ul class="lf">
@@ -449,24 +439,20 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="lstFilter">
-                                                                    <div class="lst1">
-                                                                        <h5>최근수강순</h5>
-                                                                        <div class="btn"><i class="fas fa-caret-down"></i></div>
-                                                                    </div>
-                                                                    <div class="lst2">
-                                                                        <h5>달성율순</h5>
-                                                                        <div class="btn"><i class="fas fa-caret-down"></i></div>
-                                                                    </div>
-                                                                    <div class="lst3">
-                                                                        <h5>강자명순</h5>
-                                                                        <div class="btn"><i class="fas fa-caret-down"></i></div>
-                                                                    </div>
-                                                                    <div class="lst4">
-                                                                        <h5>선생님이름순</h5>
-                                                                        <div class="btn"><i class="fas fa-caret-down"></i></div>
-                                                                    </div>
-                                                                </div>
+                                                                <ul class="lstFilter">
+                                                                    <li class="lst1">
+                                                                        최근수강순<i class="fas fa-caret-down"></i>
+                                                                    </li>
+                                                                    <li class="lst2">
+                                                                        달성율순<i class="fas fa-caret-down"></i>
+                                                                    </li>
+                                                                    <li class="lst3">
+                                                                        강좌명순<i class="fas fa-caret-down"></i>
+                                                                    </li>
+                                                                    <li class="lst4">
+                                                                        선생님이름순<i class="fas fa-caret-down"></i>
+                                                                    </li>
+                                                                </ul>
                                                             </div>
                                                             <div class="cardWrap">
                                                                 <div class="card">
@@ -475,25 +461,26 @@
                                                                             <img src="img/bannerE.png" alt="영단기환급반" class="rf">
                                                                             <h3>
                                                                                 TOEIC &gt; LC &gt; RC
-                                                                                <strong>김성은</strong>
                                                                             </h3>
+                                                                            <strong>김성은</strong>
                                                                         </div>
                                                                         <div class="tcPic">
-                                                                            <img src="img/new.png" alt="NEW태그" class="tag">
-                                                                            <img src="img/teacher1.png" alt="김성은 선생님 사진" class="pic">
+                                                                            <div class="tag tag1 img"></div>
+                                                                            <div class="pic pic1 img"></div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="info">
                                                                         <div class="hdr">
-                                                                            <div class="base">기초</div>
-                                                                            <h2>[김성은토익] 실전 730 & 900 목표반 패키지<br> [현장강의] 마스터 + 실전마스터</h2>
-                                                                            <h4>수강기간 15.05.13 ~ 15.08.17</h4>
+                                                                            <button class="gr">기초</button>
+                                                                            <h2>[김성은토익] 실전 730 & 900 목표반 패키지</h2>
+                                                                            <h2>[현장강의] 마스터 + 실전마스터</h2>
                                                                         </div>
+                                                                        <p>수강기간 15.05.13 ~ 15.08.17</p>
                                                                         <div class="seg">
                                                                             <h3>20강<span>/24강</span></h3>
                                                                             <div class="graphWrap">
                                                                                 <div class="bar">
-                                                                                    <div class="gage"></div>
+                                                                                    <div class="gage g1"></div>
                                                                                 </div>
                                                                                 <span>86%</span>
                                                                             </div>
@@ -508,10 +495,12 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
+                                                                        <div class="dotted"></div>
                                                                     </div>
                                                                     <div class="view">
                                                                         <div class="del">
-                                                                            <div class="delete">삭제</div>
+                                                                            <p class="delete">삭제</p>
+                                                                            <div class="divBar">|</div>
                                                                             <div class="mark color"></div>
                                                                         </div>
                                                                         <button class="wh"><i class="far fa-bars"></i>증명서</button>
@@ -527,24 +516,24 @@
                                                                             <img src="img/bannerE.png" alt="영단기환급반" class="rf">
                                                                             <h3>
                                                                                 TOEIC &gt; LC
-                                                                                <strong>그웬</strong>
                                                                             </h3>
+                                                                            <strong>그웬</strong>
                                                                         </div>
                                                                         <div class="tcPic">
-                                                                            <img src="img/unnew.png" alt="임박태그" class="tag">
-                                                                            <img src="img/teacher2.png" alt="그웬 선생님 사진" class="pic">
+                                                                            <div class="tag tag2 img"></div>
+                                                                            <div class="pic pic2 img"></div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="info">
                                                                         <div class="hdr">
-                                                                            <h2>[영단기] 1700명 마감! (인사담당자는 말 못하는) 공대생들이 알아야 할 지극히 현실적인 취업전략특강 + 개념완성반을 한번에 알고가는 방법</h2>
-                                                                            <h4>수강기간 15.05.13 ~ 15.08.17</h4>
+                                                                            <h2>[영단기] 1700명 마감! (인사담당자는 말 못하는)<br> 공대생들이 알아야 할 지극히 현실적인 취업전략특강 + 개념완성반을 한번에 알고가는 방법</h2>
                                                                         </div>
+                                                                        <p>수강기간 15.05.13 ~ 15.08.17</p>
                                                                         <div class="seg">
                                                                             <h3>5강<span>/24강</span></h3>
                                                                             <div class="graphWrap">
                                                                                 <div class="bar">
-                                                                                    <div class="gage"></div>
+                                                                                    <div class="gage g2"></div>
                                                                                 </div>
                                                                                 <span>25%</span>
                                                                             </div>
@@ -559,10 +548,12 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
+                                                                        <div class="dotted"></div>
                                                                     </div>
                                                                     <div class="view">
                                                                         <div class="del">
-                                                                            <div class="delete">삭제</div>
+                                                                            <p class="delete">삭제</p>
+                                                                            <div class="divBar">|</div>
                                                                             <div class="mark"></div>
                                                                         </div>
                                                                         <button class="wh"><i class="far fa-bars"></i>증명서</button>
@@ -575,22 +566,22 @@
                                                                 <div class="card">
                                                                     <div class="teacher">
                                                                         <div class="tcName">
-                                                                            <img src="img/tab02.png" width="54" alt="영단기" class="rf">
+                                                                            <img src="img/tabC02.png" width="54" alt="영단기" class="rf">
                                                                             <h3>
                                                                                 TOEIC &gt; LC &gt; RC
-                                                                                <strong>권오경/홍진걸/김성은</strong>
                                                                             </h3>
+                                                                            <strong>권오경/홍진걸/김성은</strong>
                                                                         </div>
                                                                         <div class="tcPic">
-                                                                            <img src="img/picNote.png" width="30" alt="노트" class="pic">
+                                                                            <img src="img/picNote.png" width="30" height="33" alt="노트" class="pic">
                                                                             <strong>보카강훈련</strong>
                                                                         </div>
                                                                     </div>
                                                                     <div class="info">
                                                                         <div class="hdr">
                                                                             <h2>[토익단기학교] 시작반_보카강 훈련</h2>
-                                                                            <h4>수강기간 15.01.08 ~ 16.01.09</h4>
                                                                         </div>
+                                                                        <p>수강기간 15.01.08 ~ 16.01.09</p>
                                                                         <div class="seg">
                                                                             <h3>7강<span>/24강</span></h3>
                                                                             <div class="graphWrap">
@@ -610,10 +601,12 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
+                                                                        <div class="dotted"></div>
                                                                     </div>
                                                                     <div class="view">
                                                                         <div class="del">
-                                                                            <div class="delete">휴강신청</div>
+                                                                            <p class="delete">휴강신청</p>
+                                                                            <div class="divBar">|</div>
                                                                             <div class="mark"></div>
                                                                         </div>
                                                                         <button class="wh"><i class="far fa-bars"></i>증명서</button>
@@ -626,22 +619,22 @@
                                                                 <div class="card">
                                                                     <div class="teacher">
                                                                         <div class="tcName">
-                                                                            <img src="img/tab02.png" width="54" alt="영단기" class="rf">
+                                                                            <img src="img/tabC02.png" width="54" alt="영단기" class="rf">
                                                                             <h3>
                                                                                 TOEIC &gt; LC &gt; RC
-                                                                                <strong>권오경/홍진걸/김성은</strong>
                                                                             </h3>
+                                                                            <strong>권오경/홍진걸/김성은</strong>
                                                                         </div>
                                                                         <div class="tcPic">
-                                                                            <img src="img/picRocket.png" width="30" alt="로켓" class="pic">
+                                                                            <img src="img/picRocket.png" width="30" height="43" alt="로켓" class="pic">
                                                                             <strong>고득점부스터</strong>
                                                                         </div>
                                                                     </div>
                                                                     <div class="info">
                                                                         <div class="hdr">
                                                                             <h2>[토익단기학교] 시작반_고득점부스터</h2>
-                                                                            <h4>수강기간 15.01.08 ~ 16.01.09</h4>
                                                                         </div>
+                                                                        <p>수강기간 15.01.08 ~ 16.01.09</p>
                                                                         <div class="seg">
                                                                             <h3>17강<span>/24강</span></h3>
                                                                             <div class="graphWrap">
@@ -661,10 +654,12 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
+                                                                        <div class="dotted"></div>
                                                                     </div>
                                                                     <div class="view">
                                                                         <div class="del">
-                                                                            <div class="delete">휴강신청</div>
+                                                                            <p class="delete">휴강신청</p>
+                                                                            <div class="divBar">|</div>
                                                                             <div class="mark"></div>
                                                                         </div>
                                                                         <button class="wh"><i class="far fa-bars"></i>증명서</button>
@@ -677,22 +672,22 @@
                                                                 <div class="card">
                                                                     <div class="teacher">
                                                                         <div class="tcName">
-                                                                            <img src="img/tab02.png" width="54" alt="영단기" class="rf">
+                                                                            <img src="img/tabC02.png" width="54" alt="영단기" class="rf">
                                                                             <h3>
                                                                                 TOEIC &gt; LC &gt; RC
-                                                                                <strong>권오경/홍진걸/김성은</strong>
                                                                             </h3>
+                                                                            <strong>권오경/홍진걸/김성은</strong>
                                                                         </div>
                                                                         <div class="tcPic">
-                                                                            <img src="img/picPencil.png" width="30" alt="연필" class="pic">
+                                                                            <img src="img/picPencil.png" width="30" height="30" alt="연필" class="pic">
                                                                             <strong>미니테스트</strong>
                                                                         </div>
                                                                     </div>
                                                                     <div class="info">
                                                                         <div class="hdr">
                                                                             <h2>미니테스트</h2>
-                                                                            <h4>시험기간 15.01.08 ~ 16.01.09</h4>
                                                                         </div>
+                                                                        <p>시험기간 15.01.08 ~ 16.01.09</p>
                                                                         <div class="seg">
                                                                             <h3>응시번호 : 38572983</h3>
                                                                             <div class="btnWrap">
@@ -706,10 +701,12 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
+                                                                        <div class="dotted"></div>
                                                                     </div>
                                                                     <div class="view">
                                                                         <div class="del">
-                                                                            <div class="delete">휴강신청</div>
+                                                                            <p class="delete">휴강신청</p>
+                                                                            <div class="divBar">|</div>
                                                                             <div class="mark"></div>
                                                                         </div>
                                                                         <button class="wh"><i class="far fa-bars"></i>증명서</button>
@@ -1103,8 +1100,6 @@
                 <!-- </div> -->
             </section>
         </div>
-
-
         <div class="content academy">
             <div class="tabMenu">
                 <ul class="tabGroup">

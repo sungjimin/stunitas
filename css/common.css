@@ -9,11 +9,11 @@ body{
     margin: auto;
     left: 0; right: 0; */
 }
-/* @media (max-width:1140px) {
+@media (max-width:1140px) {
     .content{
-        margin-left: calc(182px + 56px);
+        left: 238px;
     }
-} */
+}
 .content .tabMenu{}
 .content .tabMenu>.tabGroup{
     display: flex;
@@ -51,6 +51,7 @@ body{
     background-color: #fff;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
 }
+.hideTab{display: none;}
 
 /* content 2~3 _common.css */
 .content .tabMenu>.subGroup>.tabMenu .cList>.close>.hdr{
