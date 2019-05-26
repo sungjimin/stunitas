@@ -3,6 +3,7 @@ div.wrap{
     position: relative;
     padding: 0 0 200px;
 }
+
 /* header */
 div.wrap>header{
     width: 182px;
@@ -69,6 +70,7 @@ div.wrap>header>nav>div>.navIcon{
     background-image: url('../img/iconPicture.png');
     background-size: cover;
     background-position: center;
+    display: none;
 }
 div.wrap>header>nav>div>.gnb{
     display: flex;
@@ -544,6 +546,8 @@ div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2{
 .subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.sltFilter>.ft>.gf>.ftWrap>h5{color: #222;}
 
 .subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter>.sltFilter>.ft>.gf>.lf{
+    position: absolute;
+    z-index: 5;
     width: 120px;
     margin-left: -1px;
     background-color: #fff;
@@ -725,7 +729,7 @@ div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2{
     overflow: hidden;
     height: 34px;
     line-height: 34px;
-    
+
     border-bottom: 1px dotted #ccc;
     display: flex;
     justify-content: flex-end;
@@ -771,6 +775,7 @@ div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2{
     border-radius: 5px;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 .cardWrap>.card>.view>.play>.plC{
     margin: 8.5px 0;
@@ -821,7 +826,10 @@ div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2{
 }
 .content .tabMenu>.subGroup>.sub2>.cList>.open{
     overflow: hidden;
+    display: none;
 }
+.content .tabMenu>.subGroup>.sub2>.cList>.open .more{}
+.content .tabMenu>.subGroup>.sub2>.cList>.open .fold{}
 .content .tabMenu>.subGroup>.sub2>.cList>.open>.table{
     overflow: hidden;
     line-height: 45px; color: #222;
@@ -898,7 +906,9 @@ div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2{
     justify-content:space-between;
     border-bottom: 2px solid #222;
 }
-.content .tabMenu>.subGroup>.sub3>.seg>.cList>.open{}
+.content .tabMenu>.subGroup>.sub3>.seg>.cList>.open{
+    display: none;
+}
 .content .tabMenu>.subGroup>.sub3>.seg>.cList>.open>.table>ul{
     display: flex; justify-content: space-between;
     width: 100%; color: #222;
