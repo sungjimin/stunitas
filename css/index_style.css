@@ -147,10 +147,11 @@ div.wrap>.content>header>nav>.menu>ul{
     justify-content: space-between;
     overflow: hidden;
 }
-div.wrap>.content>header>nav>.menu.clicked{}
+div.wrap>.content>header>nav>.menu.li{
+    background-repeat: no-repeat;
+}
 div.wrap>.content>header>nav>.menu>.ic{
     height: 24px;
-    background-repeat: no-repeat;
     float: left;
 }
 div.wrap>.content>header>nav>.menu>.divBar{
@@ -176,7 +177,8 @@ div.wrap>.content>section{}
 div.wrap>.content>section>.notice{
     display: flex;
     justify-content: flex-start;
-    padding: 20px 0;
+    margin: 20px 0;
+    overflow: hidden;
 }
 div.wrap>.content>section>.notice>header{}
 div.wrap>.content>section>.notice>header>u{
@@ -187,9 +189,10 @@ div.wrap>.content>section>.notice>header>i{
 }
 div.wrap>.content>section>.notice>.segWrap{
     height: 20px; overflow: hidden;
+
 }
 div.wrap>.content>section>.notice>.segWrap>.segment{
-    text-indent: 5px;
+    text-indent: 5px; height: 16px;
 }
     /* tab메뉴 */
 div.wrap>.content>section>.tabMenu{}
@@ -209,6 +212,12 @@ div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu.sub3{
 }
 div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu.sub4{
     padding: 30px 20px 40px;
+    border-radius: 4px;
+    background-color: #ccc;
+    text-align: center;
+}
+.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2>div:not(.sub01){
+    padding: 30px 20px 30px;
     border-radius: 4px;
     background-color: #ccc;
     text-align: center;
@@ -474,6 +483,13 @@ div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2{
 .subGroup2>.sub01>.ing>.tabMenu>.tabGroup3>li.clicked4{color: #000;}
 .subGroup2>.sub01>.ing>.tabMenu>.subGroup3{}
 .subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu{}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>p{
+    margin-top: 20px;
+    padding: 30px 20px 30px;
+    border-radius: 4px;
+    background-color: #ccc;
+    text-align: center;
+}
 .subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.tabGroup4{
     overflow: hidden;
     border-top: 1px solid #eee;
@@ -489,7 +505,13 @@ div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2{
 }
 .subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.tabGroup4>li.clicked5{color: #000;}
 .subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4{}
-.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>div{}
+.subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>div:not(.sub01){
+    margin-top: 20px;
+    padding: 30px 20px 30px;
+    border-radius: 4px;
+    background-color: #ccc;
+    text-align: center;
+}
 .subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01{}
 .subGroup2>.sub01>.ing>.tabMenu>.subGroup3>.tabMenu>.subGroup4>.sub01>.filter{
     display: flex;
@@ -703,7 +725,7 @@ div.wrap>.content>section>.tabMenu>.subGroup>.tabMenu>.subGroup2{
     overflow: hidden;
     height: 34px;
     line-height: 34px;
-    padding-left: 135px;
+    
     border-bottom: 1px dotted #ccc;
     display: flex;
     justify-content: flex-end;
